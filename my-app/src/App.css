@@ -1,38 +1,195 @@
+body {
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .App {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  max-width: 100%;
   text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Center the input box */
+
+
+
+
+
+/* Grid layout for notes with max 2 per row and centered alignment */
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Max 2 per row */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the grid content horizontally */
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style for each note card */
+.note-card {
+  background-color: transparent;
+  box-shadow: inset -6px -4px 2px rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1.5px solid rgba(255, 255, 255, 0.326);
+  padding: 20px;
+  width: 100%; 
+  max-width: 600px;
+  min-height: 140px;
+  align-self: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.buttonrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.remcount {
+  margin-bottom: 25px;
+  color: green;
+}
+
+/* Center the input text box */
+#temp {
+  justify-items: center;
+  width: 70%;
+  align-self: center;
+  display: inline-block;
+  color: whitesmoke;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 15px;
+  border-radius: 5px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+button {
+  cursor: pointer;
+  background-color: #010c17;
   color: white;
+  border: none;
+  width: 25%;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.tatva {
+  width: 20%;
+  height:60%; /* Adjust to previous width */
+  background-color: transparent;
+  color: cyan;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;/* Text color */
+  text-align: center;
+  display: block;
+  margin-top:20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+button:hover {
+  background-color: green;
+  color:black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+
+input[type="date"]::placeholder {
+  color: whitesmoke;
 }
+.note-card-scheduled {
+  background-color: rgba(0, 0, 255, 0.1); /* Light blue for scheduled */
+  border-color: blue;
+  color:blue
+}
+
+.note-card-done {
+  background-color: rgba(0, 128, 0, 0.1); /* Light green for done */
+  border-color: green;
+  color: green;
+}
+
+.note-card-pending {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red for pending */
+  border-color: red;
+  color:red;
+}
+
+.note-text {
+  color: cyan;
+  font-size: 16px;
+  word-wrap: break-word;
+ 
+}
+.note-heading {
+  margin-top: 0px;
+  color: whitesmoke;
+  margin-bottom: 1px;
+}
+
+
+.note-date {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: white;
+  font-size: 15px;
+  /* Add any additional styles for visibility */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+  margin: 20px auto; /* Center the container itself */
+  width: 100%; /* Full width for centering */
+}
+.a1{
+  color:white;
+
+}
+.a2{
+  color:skyblue;
+  
+}
+.a3{
+  color:red;
+  
+}
+.a4{
+  color:green;
+  
+}
+#tata{
+  width: 30%; /* Adjust to previous width */
+  background-color: transparent;
+  color: cyan;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;/* Text color */
+  text-align: center;
+  display: block;
+  margin-top:5px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
